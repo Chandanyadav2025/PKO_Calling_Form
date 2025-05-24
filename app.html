@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: Cambria, serif;
+      }
+      body {
+        width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      form {
+        width: 100%;
+      }
+      select,
+      input[type="text"],
+      input[type="date"],
+      input[type="submit"] {
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: Cambria, serif;
+      }
+      label {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: Cambria, serif;
+      }
+      select option {
+        font-size: 16px;
+        font-family: Cambria, serif;
+      }
+      .radio-label {
+        font-size: 16px;
+        font-family: Cambria, serif;
+      }
+      .box {
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #bbb;
+        box-shadow: 0 2px 12px 0 rgba(128, 128, 128, 0.18);
+        max-width: 850px;
+        width: 100%;
+        background: #fff;
+        box-sizing: border-box;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          background-color: #eca324;
+          width: 100vw;
+          height: 100px;
+          position: relative;
+        "
+      >
+        <h4 style="margin: 0; text-align: center; flex: 1; font-size: 40px">
+          PKO Calling Form
+        </h4>
+      </div>
+      <div class="box" style="max-width: 850px; margin: 0 auto; width: 100%">
+        <div class="btn">
+          <a
+            href="https://www.jansuraaj.org/"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <button
+              type="button"
+              style="
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 8px 20px;
+                font-size: 16px;
+                cursor: pointer;
+              "
+            >
+              Jan Suraaj
+            </button>
+          </a>
+        </div>
+
+        <div
+          style="background-color: #87ceeb; border-radius: 8px; padding: 10px"
+        >
+          <p style="font-weight: bold; font-size: 15px">
+            नमस्कार, मेरा नाम __ है और मैं प्रशांत किशोर जी के ऑफिस से बात कर
+            रहा हूँ/ रही हूँ / Aapki sahayata karne ke liye mujhe kuch avashyak
+            jaankari ki zaroorat hogi
+          </p>
+        </div>
+        <div class="container" style="width: 100%; padding: 10px">
+          <form method="post" action="" name="contact-form">
+            <div>
+              <label for="current_date">Current Date </label>
+              <br />
+              <input
+                type="date"
+                style="
+                  width: 100%;
+                  margin: 10px 0;
+                  height: 50px;
+                  box-sizing: border-box;
+                "
+                name="current_date"
+                id="current_date"
+                required
+              />
+            </div>
+
+            <br />
+            <div>
+              <label for="source-select">(Q1) Source of Calling? *</label>
+              <br />
+              <select
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                name="source_of_calling"
+                required
+              >
+                <option value="" disabled selected hidden>Select Option</option>
+                <option value="Inbound">Inbound</option>
+                <option value="Missed">Missed</option>
+                <option value="PK's Gmail">PK's Gmail</option>
+                <option value="PK's Twitter">PK's Twitter</option>
+                <option value="Website">Website</option>
+                <option value="Waik-in Request">Waik-in Request</option>
+                <option value="Referral">Referral</option>
+              </select>
+            </div>
+
+            <br />
+            <div>
+              <label for="Agent_ID"
+                >(Q2) एजेंट आइडी / Enter your Agent ID *</label
+              >
+              <br />
+              <select
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                name="Agent_ID"
+                required
+              >
+                <option value="" disabled selected hidden>Select Option</option>
+                <option value="Sajid Md Khan(JS776)">
+                  1.Sajid Md Khan(JS776)
+                </option>
+                <option value="Faizul Haque (JS770)">
+                  2.Faizul Haque (JS770)
+                </option>
+                <option value="Saif Hussain (JS810)">
+                  3.Saif Hussain (JS810)
+                </option>
+                <option value="Suniti Vardhan (JS794)">
+                  4.Suniti Vardhan (JS794)
+                </option>
+                <option value="Shubhankar Krishna (JS916)">
+                  5.Shubhankar Krishna (JS916)
+                </option>
+                <option value="Vishal Singh (JS769)">
+                  6.Vishal Singh (JS769)
+                </option>
+
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <br />
+            <div>
+              <label for="source-select">(Q3) Requestee's Full Name ? *</label>
+              <br />
+              <input
+                type="text"
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                name="Requestee_Name"
+                id="source-select"
+                required
+                placeholder="Enter Full Name"
+              />
+            </div>
+            <br />
+
+            <div>
+              <label>(Q4) Gender *</label>
+              <br />
+              <div
+                style="
+                  display: flex;
+                  padding-top: 15px;
+                  padding-bottom: 15px;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input type="radio" name="Gender" value="Male" required />
+                  Male
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input type="radio" name="Gender" value="Female" />
+                  Female
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input type="radio" name="Gender" value="Other" />
+                  Other
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label for="Mobile_no"
+                >(Q5) Mobile Number (Filled by agent)</label
+              >
+              <br />
+              <input
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                type="text"
+                name="Mobile_no"
+                placeholder="Write Phone Number (Only numbers)"
+              />
+            </div>
+
+            <br />
+            <div>
+              <label>Same As WhatsApp Number?</label>
+              <br />
+              <div
+                style="
+                  display: flex;
+                  padding-top: 15px;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input
+                    type="radio"
+                    id="Yes"
+                    name="Same_as_whatsapp_no."
+                    value="Yes"
+                    required
+                  />
+                  Yes
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input
+                    type="radio"
+                    id="No"
+                    name="Same_as_whatsapp_no."
+                    value="No"
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+
+            <br />
+
+            <div>
+              <label for="Whatsapp_no">(Q6) WhatsApp Number </label>
+              <br />
+              <input
+                type="text"
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                name="Whatsapp_no"
+                placeholder="Write Phone Number(Only numbers)"
+              />
+            </div>
+
+            <div>
+              <label for="source_of_contact"
+                >(Q7) How did you hear about us? *</label
+              >
+              <br />
+              <select
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                required
+                name="source_of_contact"
+              >
+                <option value="" disabled selected hidden>Select source</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Youtube">Youtube</option>
+                <option value="whatsapp">whatsapp</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Print Media">Print Media</option>
+                <option value="Gmail">Gmail</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Poster / Banner">Poster / Banner</option>
+                <option value="TV">TV</option>
+                <option value="Social listening">Social listening</option>
+                <option value="PK Connect App">PK Connect App</option>
+                <option value="D2D Campaign">D2D Campaign</option>
+                <option value="Tele Campaign">Tele Campaign</option>
+                <option value="JS">JS</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <p style="color: #007bff; font-weight: bold; font-size: 15px">
+                Sir/Ma'am, please wait while I get your details from the system
+              </p>
+              <p style="color: #007bff; font-weight: bold; font-size: 15px">
+                सर / मैडम, कृपया प्रतीक्षा करें, हम सिस्टम से आपकी जानकारी
+                प्राप्त कर रहे हैं
+              </p>
+              <button
+                type="button"
+                style="
+                  background-color: #007bff;
+                  color: #fff;
+                  border: none;
+                  border-radius: 4px;
+                  padding: 8px 20px;
+                  font-size: 16px;
+                  cursor: pointer;
+                  margin-bottom: 10px;
+                "
+              >
+                Get information
+              </button>
+            </div>
+
+            <div class="district">
+              <label for="districts">(Q6) जिला / District Name? *</label>
+              <select
+                id="districts"
+                name="districts"
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                required
+              >
+                <!-- Options will be added here dynamically -->
+              </select>
+
+              <script src="districts.js"></script>
+              <script>
+                // Get the select element
+                const selectElement = document.getElementById("districts");
+
+                // Add a default "Select district" option
+                const defaultOption = document.createElement("option");
+                defaultOption.value = "";
+                defaultOption.textContent = "Select district";
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                defaultOption.hidden = true;
+                selectElement.appendChild(defaultOption);
+
+                // Loop through the districts object and create option elements
+                for (const key in districts) {
+                  const option = document.createElement("option");
+                  option.value = key;
+                  option.textContent = districts[key];
+                  selectElement.appendChild(option);
+                }
+              </script>
+            </div>
+
+            <div class="block">
+              <label for="blockSelect">(Q5) Block Name? *</label>
+              <select
+                id="blockSelect"
+                name="blockSelect"
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                required
+              >
+                <!-- Options will be added here dynamically -->
+              </select>
+
+              <script>
+                const blockSelect = document.getElementById("blockSelect");
+                const districtSelect = document.getElementById("districts");
+
+                // Add a default "Select block" option
+                const defaultBlockOption = document.createElement("option");
+                defaultBlockOption.value = "";
+                defaultBlockOption.textContent = "Select block";
+                defaultBlockOption.disabled = true;
+                defaultBlockOption.selected = true;
+                defaultBlockOption.hidden = true;
+                blockSelect.appendChild(defaultBlockOption);
+
+                function populateBlocks(district) {
+                  blockSelect.innerHTML = ""; // Clear existing options
+
+                  // Add the default option again
+                  blockSelect.appendChild(defaultBlockOption.cloneNode(true));
+
+                  if (District_To_block[district]) {
+                    District_To_block[district].forEach((block) => {
+                      const option = document.createElement("option");
+                      option.value = block;
+                      option.textContent = block;
+                      blockSelect.appendChild(option);
+                    });
+                  } else {
+                    const option = document.createElement("option");
+                    option.value = "";
+                    option.textContent = "No blocks found";
+                    option.disabled = true;
+                    blockSelect.appendChild(option);
+                  }
+                }
+
+                // Listen for changes on the district select
+                districtSelect.addEventListener("change", function () {
+                  populateBlocks(this.value);
+                });
+
+                // Initialize blocks for any pre-selected district
+                if (districtSelect.value) {
+                  populateBlocks(districtSelect.value);
+                }
+              </script>
+            </div>
+            <br />
+            <div>
+              <label for="State_name">(Q7) State Name? </label>
+              <br />
+              <select
+                style="
+                  width: 100%;
+                  margin: 10px 0;
+                  height: 50px;
+                  box-sizing: border-box;
+                "
+                name="State_name"
+                id="state_select"
+                required
+                onchange="toggleOtherState()"
+              >
+                <option value="" disabled selected hidden>Select state</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <div id="other_state_div" style="display: none">
+                <input
+                  type="text"
+                  style="
+                    width: 100%;
+                    margin: 10px 0;
+                    height: 50px;
+                    box-sizing: border-box;
+                  "
+                  name="other_state"
+                  id="other_state_input"
+                  placeholder="Enter State Name"
+                />
+              </div>
+            </div>
+            <br />
+
+            <div>
+              <label for="reasons"
+                >(Q8) What is your reason for Calling? *</label
+              >
+              <select
+                id="reasons"
+                name="reasons"
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                required
+              >
+                <!-- Options will be added here dynamically -->
+              </select>
+
+              <label for="subReason">Sub Reason (if any)</label>
+              <select
+                id="subReason"
+                name="subReason"
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                required
+              >
+                <!-- Sub-options will be added here dynamically -->
+              </select>
+
+              <script src="reasons.js"></script>
+              <script>
+                const reasonSelect = document.getElementById("reasons");
+                const subReasonSelect = document.getElementById("subReason");
+
+                // Add default option to reason select
+                const defaultReasonOption = document.createElement("option");
+                defaultReasonOption.value = "";
+                defaultReasonOption.textContent = "Select reason";
+                defaultReasonOption.disabled = true;
+                defaultReasonOption.selected = true;
+                defaultReasonOption.hidden = true;
+                reasonSelect.appendChild(defaultReasonOption);
+
+                // Add default option to subreason select
+                const defaultSubReasonOption = document.createElement("option");
+                defaultSubReasonOption.value = "";
+                defaultSubReasonOption.textContent = "Select sub reason";
+                defaultSubReasonOption.disabled = true;
+                defaultSubReasonOption.selected = true;
+                defaultSubReasonOption.hidden = true;
+                subReasonSelect.appendChild(defaultSubReasonOption);
+
+                // Populate main reasons
+                for (const key in Reasons_for_calling) {
+                  const option = document.createElement("option");
+                  option.value = key;
+                  option.textContent = Reasons_for_calling[key];
+                  reasonSelect.appendChild(option);
+                }
+
+                function populateSubReasons(reason) {
+                  subReasonSelect.innerHTML = ""; // Clear existing options
+
+                  // Add the default option again
+                  subReasonSelect.appendChild(
+                    defaultSubReasonOption.cloneNode(true)
+                  );
+
+                  if (Reason_To_SubReason[reason]) {
+                    Reason_To_SubReason[reason].forEach((subReason) => {
+                      const option = document.createElement("option");
+                      option.value = subReason;
+                      option.textContent = subReason;
+                      subReasonSelect.appendChild(option);
+                    });
+                    subReasonSelect.style.display = ""; // Show the select
+                  } else {
+                    subReasonSelect.style.display = "none"; // Hide if no subreasons
+                  }
+                }
+
+                // Listen for changes on the reason select
+                reasonSelect.addEventListener("change", function () {
+                  populateSubReasons(this.value);
+                });
+
+                // Initialize subreasons for any pre-selected reason
+                if (reasonSelect.value) {
+                  populateSubReasons(reasonSelect.value);
+                } else {
+                  subReasonSelect.style.display = "none"; // Hide initially if no reason selected
+                }
+              </script>
+            </div>
+            <br />
+            <div>
+              <label for="Remarks">(Q9) Additional Remarks? </label>
+              <br />
+              <input
+                style="width: 100vw; margin: 10px 0; height: 50px"
+                type="text"
+                name="Remarks"
+                placeholder="Enter Remarks"
+              />
+            </div>
+            <br />
+            <div>
+              <label>(Q10) Query Resolved Or Not?</label>
+              <br />
+              <div
+                style="
+                  display: flex;
+                  padding: 10px;
+                  gap: 20px;
+                  align-items: center;
+                  flex-direction: row;
+                  margin-bottom: 8px;
+                "
+              >
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 5px;
+                  "
+                  class="radio-label"
+                >
+                  <input
+                    type="radio"
+                    name="Query_status"
+                    value="Yes"
+                    required
+                  />
+                  Yes
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input type="radio" name="Query_status" value="No" />
+                  No
+                </label>
+              </div>
+            </div>
+            <div>
+              <label>(Q11) Master Feed Data?</label>
+              <br />
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 0px;
+                  padding: 10px;
+                "
+              >
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input
+                    type="radio"
+                    name="Feed_data_status"
+                    value="Yes"
+                    required
+                  />
+                  Yes
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input type="radio" name="Feed_data_status" value="No" />
+                  No
+                </label>
+              </div>
+            </div>
+            <br />
+            <div>
+              <label>(Q33) Have you sent the WA link to join group?</label>
+              <br />
+              <div
+                style="
+                  display: flex;
+                  gap: 20px;
+                  align-items: center;
+                  margin-bottom: 10px;
+                  padding: 10px;
+                "
+              >
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input
+                    type="radio"
+                    name="WA_link_sent_or_not"
+                    value="Yes"
+                    required
+                  />
+                  Yes
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input type="radio" name="WA_link_sent_or_not" value="No" />
+                  No
+                </label>
+                <label
+                  style="display: flex; align-items: center; gap: 5px"
+                  class="radio-label"
+                >
+                  <input
+                    type="radio"
+                    name="WA_link_sent_or_not"
+                    value="Already Joined"
+                  />
+                  Already Joined
+                </label>
+              </div>
+            </div>
+            <br />
+
+            <label for="membersip_id">Membership ID</label>
+            <br />
+            <input
+              style="width: 100vw; margin: 10px 0; height: 50px"
+              type="text"
+              name="Membership_id"
+              placeholder="Enter Membership ID"
+            />
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <input
+                style="
+                  width: 200px;
+                  background-color: #007bff;
+                  height: 50px;
+                  border-radius: 5px;
+                "
+                type="submit"
+                value="Submit"
+                id="submit"
+              />
+              <script>
+                document
+                  .getElementById("submit")
+                  .addEventListener("click", function (e) {
+                    this.style.backgroundColor = "#28a745"; // Change to green
+                    this.style.color = "#fff";
+                    // Show message
+                    let msg = document.createElement("span");
+                    msg.id = "submitMsg";
+                    msg.textContent = "Form is submitted";
+                    msg.style.marginLeft = "16px";
+                    msg.style.color = "#28a745";
+                    msg.style.fontWeight = "bold";
+                    // Remove old message if exists
+                    let oldMsg = document.getElementById("submitMsg");
+                    if (oldMsg) oldMsg.remove();
+                    this.parentNode.appendChild(msg);
+                    // After 2 seconds, revert color and remove message
+                    setTimeout(() => {
+                      this.style.backgroundColor = "#007bff";
+                      this.style.color = "#fff";
+                      let m = document.getElementById("submitMsg");
+                      if (m) m.remove();
+                    }, 2000);
+                  });
+              </script>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleOtherState() {
+        const stateSelect = document.getElementById("state_select");
+        const otherStateDiv = document.getElementById("other_state_div");
+        const otherStateInput = document.getElementById("other_state_input");
+
+        if (stateSelect.value === "Other") {
+          otherStateDiv.style.display = "block";
+          otherStateInput.required = true;
+        } else {
+          otherStateDiv.style.display = "none";
+          otherStateInput.required = false;
+          otherStateInput.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
+<script src="app.js"></script>
+<script src="Place_Whatsapp_No.js"></script>

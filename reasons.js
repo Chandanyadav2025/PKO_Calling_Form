@@ -1,0 +1,63 @@
+const Reasons_for_calling = {
+  Query: "Query",
+  Issue_Complaint: "Issue/Complaint",
+  Request: "Request",
+  help: "Help",
+  Suggestion_Feedback: "Suggestion/Feedback",
+  Other: "Other",
+  Junk_Call: "Junk Call",
+};
+const Reason_To_SubReason = {
+  Query: [
+    "About Prashant Kishor/Jan Suraaj",
+    "Padyatra",
+    "Job & Fellowship",
+    "Sansthaapak Sadasya",
+    "Digital Volunteer",
+    "JS Assembly Coordinator",
+    "JS Ambedkar Vahini",
+    "JS Vahini",
+    "JS Non-Resident Bihari",
+    "Party & Committee - About Party Offices' Address",
+    "Party & Committee - Update regarding JS Events",
+    "D2D Vahini",
+    "Financial Donations",
+    "JS Local Political Resource",
+    "JS Youth Sangathan",
+    "Admin & Operations",
+    "Contest Elections",
+    "Signature abhiyaan",
+    "Js women Frontal",
+    "About State core committee",
+    "Others",
+  ],
+  Issue_Complaint: [
+    "Sansthaapak Sadasya",
+    "Digital Volunteer - Payment Issue",
+    "JS Local Political Resource",
+    "Other",
+  ],
+  Request: [
+    "Invitations -Invitations for PK",
+    "Media Requests",
+    "Meeting Request - Meeting with PK",
+    "JS Donation Request",
+    "Others"
+  ],
+  help: [
+    "Help",
+    "Financial Help",
+    "Medical Help",
+    "Failure of State/Central Schemes",
+    "Seeking Civil & Legal Help",
+    "Other",
+  ],
+  Suggestion_Feedback: [
+    "Yatra",
+    "Jan Suraaj/PK",
+    "Party & Committee",
+    "Election",
+    "Others",
+  ],
+  
+};
